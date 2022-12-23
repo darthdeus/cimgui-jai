@@ -1,10 +1,15 @@
 .PHONY: generate examples
 
+ifeq ($(OS),Windows_NT)
 default: examples
-	./examples/basic_window
+	.\examples/basic.exe
+else
+default: examples
+	./examples/basic
+endif
 
 examples:
-	jai examples/basic_window.jai
+	jai examples/basic.jai
 
 build-raylib:
 	git submodule update --init --recursive
