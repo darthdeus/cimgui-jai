@@ -18,11 +18,11 @@ generate_bindings :: () -> bool {
 
         #if OS == .WINDOWS {
             output_filename = "windows.jai";
-            lib_name        = "rlImGui";
+            lib_name        = "cimgui";
             array_add(*libpaths, "windows");
         } else #if OS == .LINUX {
             output_filename = "linux.jai";
-            lib_name        = "libraylib";
+            lib_name        = "libcimgui";
             array_add(*libpaths, "linux");
         } else #if OS == .MACOS {
             // @ToDo: Determine dynamically? Customize?
@@ -34,8 +34,8 @@ generate_bindings :: () -> bool {
 
         array_add(*libnames, lib_name);
         array_add(*system_include_paths, GENERATOR_DEFAULT_SYSTEM_INCLUDE_PATH);
-        array_add(*source_files,  "rlImGui/rlImGui.h");
-        array_add(*extra_clang_arguments, "-x", "c", "-isystem", "rlImGui/raylib/src");
+        array_add(*source_files,  "cimgui/cimgui.h");
+        array_add(*extra_clang_arguments, "-x", "c", "-D", "CIMGUI_DEFINE_ENUMS_AND_STRUCTS");
         strip_flags = 0;
         // strip_flags &= ~(Strip_Flags.CONSTRUCTORS | .DESTRUCTORS);
     }
