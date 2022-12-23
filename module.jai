@@ -10,3 +10,6 @@
 } else {
     #assert(false);
 }
+
+va_list :: *void;
+FILE :: *void;
