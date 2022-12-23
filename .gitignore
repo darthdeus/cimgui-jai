@@ -6,5 +6,6 @@ rlgl.h
 .build
 *.pdb
 *.exe
+*.exp
 
 build/
