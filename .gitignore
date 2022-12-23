@@ -1,0 +1,10 @@
+raylib.h
+raymath.h
+rlgl.h
+*.dll
+*.lib
+.build
+*.pdb
+*.exe
+
+examples/basic_window
