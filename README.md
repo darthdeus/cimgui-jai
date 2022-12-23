@@ -1,6 +1,6 @@
 # WIP bindings for https://github.com/cimgui/cimgui
 
-Does not work yet.
+The example at `examples/basic.c` runs, but there's no OpenGL or other bindings to visually confirm that everything works. So far we only get `imgui.ini` which looks correct.
 
 ## Precompiled binaries
 
